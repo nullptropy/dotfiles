@@ -2,10 +2,12 @@ env:
   WINIT_X11_SCALE_FACTOR: "1.0"
   NEOVIDE_MULTIGRID: "true"
 
-window:
-  padding:
-    x: 10
-    y: 10
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux new-session 'helix .'"
 
 font:
   size: 14
